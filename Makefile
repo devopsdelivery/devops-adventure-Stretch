@@ -17,6 +17,11 @@ run: ## Run the project in detached mode
 	@docker-compose -f ./srcs/docker-compose.yml up -d --build
 	@echo "${GREEN}\t=== Project Running ===${NC}"
 
+down: ## Stop the project
+	@echo "${YELLOW}\t=== Stopping Project ===${NC}"
+	@docker-compose -f ./srcs/docker-compose.yml down
+	@echo "${GREEN}\t=== Project Stopped ===${NC}"
+
 status: ## Display status of networks, volumes, containers, and images
 #	Networks
 		@echo "$(BLUE)\t\t=== Docker Status ===$(NC)"
