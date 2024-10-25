@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "42-ft-transcendence"
+name = "market"
 version = "0.1.0"
 description = ""
 authors = ["Jhonata <jhsocial@icloud.com>"]

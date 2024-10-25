@@ -1,0 +1,56 @@
+<!-- arquivo: dashboard/templates/dashboard/dashboard.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Dashboard</h1>
+        <div class="row mt-4">
+            <!-- Card de Usuários Ativos -->
+            <div class="col-md-3">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Usuários Ativos</h5>
+                        <p class="card-text">{{ usuarios_ativos }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card de Vendas Totais -->
+            <div class="col-md-3">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Vendas Totais</h5>
+                        <p class="card-text">{{ vendas_total }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card de Produtos -->
+            <div class="col-md-3">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Produtos</h5>
+                        <p class="card-text">{{ produtos }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card de Pedidos -->
+            <div class="col-md-3">
+                <div class="card text-white bg-danger mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Pedidos</h5>
+                        <p class="card-text">{{ pedidos }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
