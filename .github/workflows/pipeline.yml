@@ -1,0 +1,26 @@
+name: BuildAndPublish
+
+on:
+  push:
+    branches: 
+      - main
+      - feature/*
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Echo a message
+      run: |
+        echo "Hello world"
+        echo "World Hello"
+      
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
